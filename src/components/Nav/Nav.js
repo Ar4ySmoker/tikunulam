@@ -11,13 +11,6 @@ const listItemsObjects = [
   { text: "Контакты", link: "/" },
 ];
 
-// function Navigation() {
-//   return (
-//     <nav className="navigation">
-//     </nav>
-//   );
-// }
-// export default Navigation;
 function Nav() {
   return (
     <nav className="flex w-full justify-between items-center">
