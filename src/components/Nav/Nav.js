@@ -1,28 +1,40 @@
 import Call from "../Call/Call";
 import LogoSingle from "../LogoSingle/LogoSingle";
+
+
+const listItems = ["Главная", "Карта", "Вакансии", "Контакты"];
+
+const listItemsObjects = [
+  { text: "Главная", link: "/" },
+  { text: "Карта", link: "/" },
+  { text: "Вакансии", link: "/" },
+  { text: "Контакты", link: "/" },
+];
+
+// function Navigation() {
+//   return (
+//     <nav className="navigation">
+//     </nav>
+//   );
+// }
+// export default Navigation;
 function Nav() {
   return (
-    <div className="flex w-full justify-between items-center">
+    <nav className="flex w-full justify-between items-center">
       <LogoSingle />
-      <ul className="cursor-pointer items-center w-auto flex gap-10 select-none list-none m-0 px-10 justify-center">
-        <li>
-          <a>Главная</a>
-        </li>
-        <li>
-          <a>Карта</a>
-        </li>
-        <li>
-          <a>Вакансии</a>
-        </li>
-        <li>
-          <a>Контакты</a>
-        </li>
+      <ul className=" cursor-pointer items-center w-auto flex gap-10 select-none list-none m-0 px-10 justify-center">
+        {listItemsObjects.map((item) => (
+          <li key={item}>
+            <a href={item.link}>{item.text}</a>
+          </li>
+        ))}
       </ul>
       <div className="mr-10 flex justify-self-end items-center gap-1">
         <Call className="flex" />
         <a>Позвонить</a>
       </div>
-    </div>
+    </nav>
   );
 }
 export default Nav;
+
