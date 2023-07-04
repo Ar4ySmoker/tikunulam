@@ -1,3 +1,8 @@
+@import './tailwind.css';
+.shadow-fourth {
+   box-shadow: inset 0rem 0 3rem #00000022;
+  
+}
 .App {
   text-align: center;
 }
