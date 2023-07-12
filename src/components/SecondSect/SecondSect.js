@@ -1,24 +1,30 @@
+// const secondSect = [
+//   "Преимушевства работы с нами >",
+//   "Подготовка документов >",
+//   "Поиск подходящей работы >",
+//   "Поиск жилья >",
+//   "Сопровождение по ЕС >",
+// ];
+
+const secondSectObjects = [
+  { text: "Преимушевства работы с нами >", link: "/" },
+  { text: "Подготовка документов >", link: "/" },
+  { text: "Поиск подходящей работы >", link: "/" },
+  { text: "Поиск жилья >", link: "/" },
+  { text: "Сопровождение по ЕС >", link: "/" },
+];
 function SecondSect() {
   return (
-    <div className="h-[84vh] flex flex-col items-center">
-      <h4 className="box-border text-center mt-[58px] mb-[25px] text-[40px] leading-1.1 font-semibold">
-        Преимушевства работы с нами
-      </h4>
-      <div>
-        <a className="px-[10px] text-[21px] leading-1.238 font-normal text-blue-500">
-          Подготовка документов{" >"}
-        </a>
-        <a className="px-[10px] text-[21px] leading-1.238 font-normal text-blue-500">
-          Поиск подходящей работы{" >"}
-        </a>
-        <a className="px-[10px] text-[21px] leading-1.238 font-normal text-blue-500">
-          Поиск жилья{" >"}
-        </a>
-        <a className="px-[10px] text-[21px] leading-1.238 font-normal text-blue-500">
-          Сопровождение по ЕС{" >"}
-        </a>
-      </div>
+    <div className="box-content h-[84vh]">
+      <ul className="flex-wrap flex justify-center self-auto hover:self-end gap-7 text-blue">
+        {secondSectObjects.map((item) => (
+          <li className="cursor-pointer text-cyan-600" key={item}>
+            <a href={item.link}>{item.text}</a>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
+
 export default SecondSect;

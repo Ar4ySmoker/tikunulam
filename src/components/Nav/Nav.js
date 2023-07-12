@@ -22,10 +22,10 @@ function Nav() {
           </li>
         ))}
       </ul>
-      <div className="mr-10 flex justify-self-end items-center gap-1">
+      <a className="mr-10 flex justify-self-end items-center gap-1">
         <Call className="flex" />
-        <a>Позвонить</a>
-      </div>
+        <p>Позвонить</p>
+      </a>
     </nav>
   );
 }
